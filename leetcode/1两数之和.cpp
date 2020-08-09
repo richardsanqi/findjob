@@ -12,23 +12,50 @@
 
 using namespace std;
 
-class Solution {
-public:
-	vector<int> twoSum(vector<int>& nums, int target) {
-		vector<int> v;
-		int size = nums.size();
-		for (int i = 0; i < size; ++i)
+//暴力求解
+vector<int> twoSum(vector<int>& nums, int target) {
+	vector<int> v;
+	int size = nums.size();
+	for (int i = 0; i < size; ++i)
+	{
+		for (int j = i + 1; j < size; ++j)
 		{
-			for (int j = i + 1; j < size; ++j)
+			if (nums[i] + nums[j] == target)
 			{
-				if (nums[i] + nums[j] == target)
-				{
-					v.push_back(i);
-					v.push_back(j);
-					return v;
-				}
+				v.push_back(i);
+				v.push_back(j);
+				return v;
 			}
 		}
-		return v;
 	}
-};
+	return v;
+}
+
+//复杂度分析：
+//
+//时间复杂度：O(n^2)
+//对于每个元素，我们试图通过遍历数组的其余部分来寻找它所对应的目标元素，这将耗费O(n)的时间。
+//因此时间复杂度为 O(n^2)
+//空间复杂度：O(1)。
+
+
+int main()
+{
+	
+	vector<int> v;
+	
+	int num;
+	while (cin >> num)
+	{
+		v.push_back(num);
+	}
+	int target;
+	cin >> target;
+	vector<int> ans = twoSum(v, target);
+	for (vector<int>::iterator it = v.begin(); it != v.end(); ++it)
+	{
+		cout << *it << " ";
+	}
+	
+	return 0;
+}
