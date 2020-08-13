@@ -1,8 +1,7 @@
-//¶ÔÈÎºÎÒ»¸ö×ÔÈ»Êýn£¬Èç¹ûËüÊÇÅ¼Êý£¬ÄÇÃ´°ÑËü¿³µôÒ»°ë£»Èç¹ûËüÊÇÆæÊý£¬ÄÇÃ´°Ñ£¨3n+1£©¿³µôÒ»°ë
-//¶Ô¸ø¶¨µÄÈÎÒ»²»³¬¹ý1000µÄÕýÕûÊýn£¬¼òµ¥µØÊýÒ»ÏÂ£¬ÐèÒª¶àÉÙ²½²ÅÄÜµÃµ½n=1£¿
-//ÊäÈëÑùÀý
+//å¯¹ä»»æ„ä¸€ä¸ªè‡ªç„¶æ•°nè¿›è¡Œå¡æ‹‰å…¹çŒœæƒ³ï¼Œnä¸ºå¶æ•°n/2,nä¸ºå¥‡æ•°3n+1/2,ç›´åˆ°1 è®°å½•æ‰€éœ€è¦çš„æ­¥æ•°
+//è¾“å…¥
 //3
-//Êä³öÑùÀý
+//è¾“å‡º
 //5
 
 #include <iostream>
@@ -15,7 +14,7 @@ int main()
 	int step = 0;
 	if (n > 1000)
 	{
-		cout << "ÊäÈëµÄÊý²»ºÏ·¨" << endl;
+		cout << "è¾“å…¥éžæ³•æ•°æ®" << endl;
 		return 0;
 	}
 	else
@@ -36,6 +35,5 @@ int main()
 		
 	}
 	cout << step << endl;
-	system("pause");
 	return 0;
 }
